@@ -10,6 +10,23 @@
 
 /*barra superior*/
 
+.contact_whattsapp {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+
+  
+}
+
+.contact_whattsapp a img {
+  float: right;
+ margin-bottom: 0;
+  height: 80px;
+  margin-top: 40%;
+  margin-right: 2%;
+}
+
 .informacion__header {
   width: 100%;
   height: 5%;
