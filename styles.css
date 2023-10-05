@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+}
+
+/*barra superior*/
+
+.informacion__header {
+  width: 100%;
+  height: 5%;
+  background-color: #305c79;
+  position: relative;
+}
+
+.contact__header {
+  display: flex;
+  color: #fff;
+  justify-content: space-between;
+}
+
+.btn__date__header .btn__date {
+  background-color: #fff;
+  color: #305c79;
+  border: none;
+  width: 100px;
+  height: 100%;
+  font-size: 17px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btn__date__header .btn__date:hover {
+  background-color: #305c79;
+  color: #fff;
+}
+
+.contact__icons__email {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+.contact__icons__email .icons__header,
+.contact__icons__email .email__header {
+  margin-right: 8%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.contact__icons__email .icons__header i {
+  margin-right: 20px;
+  font-size: 16px;
+}
+
+.contact__icons__email .email__header i {
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*header---------------------------------------------*/
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  color: #305c79;
+  background-color: #fff;
+  z-index: 99;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  margin-right: 50px;
+}
+
+.logo img {
+  height: 90px;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.icons__nav {
+  display: none;
+}
+
+#toggler,
+.navbar label {
+  display: none;
+}
+
+/* portada------------------------------- */
+
+/* .content {
+    position: absolute;
+
+    top: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .content img {
+    width: 100%;
+
+  } */
+
+.container-slider {
+  margin: 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  width: 400%;
+  height: 760px;
+  margin-left: -100%;
+  position: relative;
+}
+.slider:before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__section {
+  width: 100%;
+  position: relative;
+}
+
+.slider__content img {
+  height: 200px;
+}
+.slider__img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider__btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.7);
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  font-family: monospace;
+  text-align: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 999;
+}
+.slider__btn:hover {
+  background: #fff;
+}
+.slider__btn--left {
+  left: 10px;
+}
+.slider__btn--right {
+  right: 10px;
+}
+.slider__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: white;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+  z-index: 999;
+}
+.slider__title {
+  font-size: 4.2em;
+  margin: 0;
+}
+.slider__txt {
+  margin: 5px 0;
+  font-size: 20px;
+}
+.btn-shop {
+  display: block;
+  border: 2px solid #3586ff;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  width: 150px;
+  margin: 20px auto;
+  transition: all 0.5s;
+}
+.btn-shop:hover {
+  background: #3586ff;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .contact__icons__email .icons__header i {
+    display: none;
+  }
+
+  .contact__icons__email .email__header i {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .icons__nav {
+    display: flex;
+  }
+  .icons__nav i {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+  }
+
+  .slider {
+    height: 250px;
+  }
+
+  .slider__content {
+    top: 58%;
+  }
+
+  .slider__title {
+    font-size: 1em;
+  }
+  .slider__txt {
+    font-size: 13px;
+  }
+
+  .slider__btn {
+    width: 25px;
+    height: 25px;
+    font-size: 19px;
+  }
+  .btn-shop {
+    width: 80px;
+    padding: 5px;
+  }
+
+  .slider__content img {
+    height: 50px;
+  }
+}
