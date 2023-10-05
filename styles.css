@@ -25,6 +25,9 @@
   margin-right: 2%;
   cursor: pointer;
 }
+.contact_whattsapp a img:hover {
+  height: 85px;
+}
 
 .informacion__header {
   width: 100%;
