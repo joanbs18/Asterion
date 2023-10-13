@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 
 * {
   padding: 0;
@@ -678,18 +679,41 @@
   border-bottom: 1px solid #1d8122;
 }
 
+.section__notices {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.notices {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  text-wrap: balance;
+  color: #fff;
+}
+
 .card__notices {
   padding: 20px;
-  width: 330px;
-  min-height: 370px;
+  max-width: 500px;
+  height: 460px;
   border-radius: 20px;
   background: #fff;
-  box-shadow: 5px 5px 6px #dadada, -5px -5px 6px #f6f6f6;
+  box-shadow: 5px 5px 6px #305c79, -5px -5px 6px #305c79;
   transition: 0.4s;
+  font-family: "Merriweather", serif;
 }
 
 .card__notices:hover {
   translate: 0 -10px;
+}
+
+.card-title:hover {
+  text-decoration: underline;
 }
 
 .card__notices .card-title {
@@ -700,10 +724,12 @@
 }
 
 .card__notices .card-image {
-  min-height: 350px;
-  background-color: #c9c9c9;
-  border-radius: 15px;
-  box-shadow: inset 8px 8px 10px #c3c3c3, inset -8px -8px 10px #cfcfcf;
+  min-height: 180px;
+  width: 100%;
+}
+
+.card__notices .card-image a img {
+  width: 500px;
 }
 
 .card__notices .card-body {
@@ -719,15 +745,27 @@
   color: #636363;
 }
 
+.card-link {
+  margin: 13px 0 0 10px;
+  font-size: 16px;
+  color: #305c79;
+  font-weight: 700;
+}
+
+.card-link:hover {
+  text-decoration: underline;
+}
+
 .card__notices .by-name {
   font-weight: 700;
 }
 
 @media screen and (max-width: 600px) {
   .contact_whattsapp a img {
-    height: 60px;
+    width: 80px;
     margin-top: 160%;
     margin-right: 4%;
+    z-index: 99;
   }
   .contact__icons__email .icons__header i {
     display: none;
@@ -851,4 +889,31 @@
   .card__services {
     width: 320px;
   }
+
+  .section__notices {
+    display: grid;
+    place-content: center;
+  }
+
+
+.notices {
+  grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+}
+
+.card__notices {
+  padding: 20px;
+  max-width: 300px;
+  height: 420px;
+
+}
+
+.card__notices .card-image {
+  min-height: 180px;
+}
+
+.card__notices .card-image a img {
+  width: 300px;
+}
+
 }
