@@ -760,6 +760,10 @@
   font-weight: 700;
 }
 
+.contact{
+  background-color: #305c79;
+}
+
 @media screen and (max-width: 600px) {
   .contact_whattsapp a img {
     width: 80px;
