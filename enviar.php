@@ -14,6 +14,7 @@ $body .= "Correo: $email\n";
 $body -= "Mensaje: $messaje";
 
 mail($destination,$asunt,$body);
+header('Location:index.html');
 
 
 ?>
