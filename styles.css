@@ -351,7 +351,7 @@
 
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   top: 20px;
   left: 20px;
 }
@@ -452,6 +452,7 @@
   content: attr(data-title);
   top: 50%;
   transform: translateY(-50%);
+  color: #305c79;
 }
 
 .buttons button p:after {
@@ -760,8 +761,214 @@
   font-weight: 700;
 }
 
-.contact{
+.contact {
   background-color: #305c79;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3%;
+}
+
+.contact_form h1 {
+  font-size: 50px;
+  padding: 20px;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+
+.contact_form p {
+  font-size: 15px;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+.box__contact__form {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  text-wrap: balance;
+  color: #fff;
+}
+
+.contact__grid {
+  display: grid;
+  place-content: center;
+}
+
+.input {
+  position: relative;
+  width: 300px;
+  border: none;
+  box-shadow: 0px 1.5px 0px 0px #fff;
+  padding: 1rem;
+  transition: all 200ms ease-in-out;
+  background: #ffffff;
+  font-size: 1rem;
+
+}
+
+.contact__grid h1{
+  font-size: 30px;
+  padding: 5px;
+  color: #fff;
+  border: none;
+  text-align: left;
+}
+
+.dates_personal{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.dates_personal p i{
+  margin-right: 3%;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.input-label {
+  font-size: 1rem;
+  color: #fff;
+  margin-bottom: 4px;
+  margin-left: 1px;
+}
+
+.input-helper {
+  color: #fff;
+  font-size: 0.5rem;
+  margin-top: 6px;
+  margin-left: 1px;
+  visibility: hidden;
+  transform: translateY(-0.5rem);
+  transition: all 100ms linear;
+  z-index: 1;
+}
+
+.input::placeholder {
+  color: rgb(145, 145, 145);
+  font-size: 1rem;
+}
+
+.input::after {
+  content: attr(placeholder);
+  position: absolute;
+  color: #161616;
+  top: 0;
+  left: 0;
+}
+
+.input:focus {
+  border: none;
+  box-shadow: 0px 1.5px 0px 0px #fff;
+  outline: none;
+}
+
+.input:focus + .input-helper {
+  visibility: visible;
+  transform: translateY(0rem);
+}
+
+.input:focus::placeholder {
+  visibility: hidden;
+}
+
+.wrapper {
+  display: inline-flex;
+  list-style: none;
+  height: 120px;
+  width: 100%;
+  padding-top: 5px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+}
+
+.wrapper .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  color: #305c79;
+}
+
+.wrapper .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
 }
 
 @media screen and (max-width: 600px) {
@@ -899,25 +1106,22 @@
     place-content: center;
   }
 
+  .notices {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
 
-.notices {
-  grid-template-columns: repeat(1, 1fr);
-  gap: 20px;
-}
+  .card__notices {
+    padding: 20px;
+    max-width: 300px;
+    height: 420px;
+  }
 
-.card__notices {
-  padding: 20px;
-  max-width: 300px;
-  height: 420px;
+  .card__notices .card-image {
+    min-height: 180px;
+  }
 
-}
-
-.card__notices .card-image {
-  min-height: 180px;
-}
-
-.card__notices .card-image a img {
-  width: 300px;
-}
-
+  .card__notices .card-image a img {
+    width: 300px;
+  }
 }
