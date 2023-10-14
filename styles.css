@@ -9,6 +9,10 @@
   font-family: "Noto Serif", serif;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 /*barra superior*/
 
 .contact_whattsapp {
@@ -810,10 +814,9 @@
   transition: all 200ms ease-in-out;
   background: #ffffff;
   font-size: 1rem;
-
 }
 
-.contact__grid h1{
+.contact__grid h1 {
   font-size: 30px;
   padding: 5px;
   color: #fff;
@@ -821,21 +824,20 @@
   text-align: left;
 }
 
-.dates_personal{
+.dates_personal {
   display: flex;
   justify-content: center;
   width: 100%;
   white-space: nowrap;
 }
 
-.dates_personal p i{
+.dates_personal p i {
   margin-right: 3%;
 }
 
 .input-box {
   display: flex;
   flex-direction: column;
-  
 }
 
 .input-label {
@@ -1065,6 +1067,9 @@
   .btn__contact__me {
     margin-bottom: 10px;
   }
+  .section__1{
+    margin-top: 12%;
+  }
 
   .section__1 h1 {
     font-size: 25px;
@@ -1123,5 +1128,45 @@
 
   .card__notices .card-image a img {
     width: 300px;
+  }
+
+  .contact_form h1 {
+    font-size: 25px;
+  }
+
+  iframe {
+    width: 300px;
+  }
+
+  .box__contact__form {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .contact__grid {
+    display: grid;
+    place-content: center;
+  }
+
+  .input {
+    position: relative;
+    width: 300px;
+    border: none;
+    box-shadow: 0px 1.5px 0px 0px #fff;
+    padding: 1rem;
+    transition: all 200ms ease-in-out;
+    background: #ffffff;
+    font-size: 1rem;
+  }
+
+  .contact__grid h1 {
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+  }
+
+  .dates_personal {
+    flex-direction: column;
   }
 }
