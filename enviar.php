@@ -11,7 +11,7 @@ $asunt="Solicitud de cita desde la página Web Asterion";
 $body = "De: $name \n";
 $body .= "Teléfono: $number\n";
 $body .= "Correo: $email\n";
-$body -= "Mensaje: $message";
+$body .= "Mensaje: $message";
 
 mail($destination,$asunt,$body);
 header('Location:index.html');
