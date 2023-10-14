@@ -2,7 +2,7 @@
 $name = $_POST['name'];
 $number = $_POST['number'];
 $email = $_POST['email'];
-$messaje = $_POST['messaje'];
+$message  = $_POST['message'];
 
 
 $destination="joansolano80@gmail.com";
