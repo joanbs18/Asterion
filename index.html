@@ -380,37 +380,51 @@
 
         </section>
     </main>
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="#">
+                        <img src="img/asterion blanco-01.png" alt="Logo de SLee Dw">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Esteban Campos</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, ipsa?</p>
+            </div>
+            <div class="box">
+                <h2>Nuestro Contacto</h2>
+                <div class="red-social">
+                    <ul class="wrapper">
+                        <li class="icon facebook">
+                            <span class="tooltip">Facebook</span>
+                            <span><i class="fab fa-facebook-f"></i></span>
+                        </li>
+                        <li class="icon twitter">
+                            <span class="tooltip">WhatSapp</span>
+                            <span><i class="fab fa-whatsapp"></i></span>
+                        </li>
+                        <li class="icon instagram">
+                            <span class="tooltip">Instagram</span>
+                            <span><i class="fab fa-instagram"></i></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2023 <b>Joan Bravo</b> - Todos los Derechos Reservados.</small>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="index.js"></script>
 
-    <script type="module">
-        const url = 'https://google-translate1.p.rapidapi.com/language/translate/v2';
-        const options = {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/x-www-form-urlencoded',
-                'Accept-Encoding': 'application/gzip',
-                'X-RapidAPI-Key': '90f557d04emsh467de370ec8f941p11d958jsnf43e1b1ff7b5',
-                'X-RapidAPI-Host': 'google-translate1.p.rapidapi.com'
-            },
-            body: new URLSearchParams({
-                q: 'Hello, world!',
-                target: 'es',
-                source: 'en'
-            })
-        };
-
-        try {
-            const response = await fetch(url, options);
-            const result = await response.text();
-            console.log(result);
-        } catch (error) {
-            console.error(error);
-        }
-    </script>
+   
 </body>
 
 </html>
