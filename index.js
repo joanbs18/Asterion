@@ -1,3 +1,8 @@
+window.onload = function () {
+  $("#loader").fadeOut();
+  $("body").removeClass("hidden");
+};
+
 //SLIDER INICIAL----------------------------------------
 
 const slider = document.querySelector("#slider");
