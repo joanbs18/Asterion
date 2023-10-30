@@ -13,7 +13,6 @@ html {
   scroll-behavior: smooth;
 }
 
-
 .btn__whattsapp {
   position: fixed;
   width: 60px;
@@ -109,9 +108,14 @@ html {
 .contact__icons__email .icons__header i {
   margin-right: 20px;
   font-size: 16px;
+  color: #fff;
 }
 
-.contact__icons__email .email__header i {
+.contact__icons__email .icons__header a i:hover {
+  color: #bbb8b8;
+}
+
+.contact__icons__email .email__header a i {
   font-size: 12px;
   margin-right: 5px;
 }
@@ -646,7 +650,7 @@ html {
 
 .services {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
   text-wrap: balance;
   color: #fff;
@@ -727,7 +731,6 @@ html {
   line-height: 1.4;
 }
 
-
 .section__notices {
   display: flex;
   justify-content: center;
@@ -752,8 +755,7 @@ html {
   height: 460px;
   border-radius: 20px;
   background: #fff;
-  /* box-shadow: 5px 5px 6px #305c79, -5px -5px 6px #305c79; */
-  border: 10px solid #305c79;
+  box-shadow: 5px 5px 6px #0d0d0d32, -5px -5px 6px #0d0d0d32;
   transition: 0.4s;
   font-family: "Merriweather", serif;
 }
@@ -1004,10 +1006,10 @@ html {
   color: #fff;
 }
 
-.wrapper .twitter:hover,
-.wrapper .twitter:hover .tooltip,
-.wrapper .twitter:hover .tooltip::before {
-  background: #1da1f2;
+.wrapper .whattsapp:hover,
+.wrapper .whattsapp:hover .tooltip,
+.wrapper .whattsapp:hover .tooltip::before {
+  background: #25d366;
   color: #fff;
 }
 
@@ -1107,7 +1109,6 @@ html {
 
   .logo {
     margin-left: 0;
-
   }
   .logo img {
     height: 60px;
@@ -1157,7 +1158,7 @@ html {
   }
 
   .slider__btn--left {
-   top: 80%;
+    top: 80%;
   }
   .slider__btn--right {
     top: 80%;
@@ -1168,7 +1169,6 @@ html {
   .slider__content {
     left: 68%;
   }
-
 
   .slider__btn {
     width: 25px;
@@ -1183,7 +1183,7 @@ html {
 
   .slider__content img {
     height: 80px;
-    margin-top:5% ;
+    margin-top: 5%;
   }
 
   .section__about__me {
@@ -1242,57 +1242,53 @@ html {
 
   .services .card.secundary {
     height: 150px;
-    
   }
 
   .section__2 .card {
     width: 280px;
   }
 
-  
-.section__2 .fa-solid.fa-eye {
-  font-size: 25px;
-  margin-top: 10%;
-}
-.section__2 .card i {
-  font-size: 48px;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  .section__2 .fa-solid.fa-eye {
+    font-size: 25px;
+    margin-top: 10%;
+  }
+  .section__2 .card i {
+    font-size: 48px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 
-.section__2 .card:hover {
-  transform: scale(1.05);
-}
+  .section__2 .card:hover {
+    transform: scale(1.05);
+  }
 
-.section__2 .card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  box-sizing: border-box;
-  background-color: #ffffff;
-  transform: rotateX(-90deg);
-  transform-origin: bottom;
-  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+  .section__2 .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
 
-.section__2 .card:hover .card__content {
-  transform: rotateX(0deg);
-}
+  .section__2 .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
 
-.section__2  .services .card__title {
-  margin: 0;
-  font-size: 18px;
-  color: #333;
-  font-weight: 700;
-}
+  .section__2 .services .card__title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+  }
 
-
-
-.section__2 .services .card__description {
-  font-size: 10px;
-}
+  .section__2 .services .card__description {
+    font-size: 10px;
+  }
 
   .section__notices {
     display: grid;

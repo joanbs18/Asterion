@@ -44,4 +44,7 @@ setInterval(function () {
   Next();
 }, 10000);
 
-
+AOS.init({
+  duration: 1100,
+  once: true,
+}); //ESTE METODO ES PARA LAS ANIMACIONES
