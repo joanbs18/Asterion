@@ -3,6 +3,11 @@ window.onload = function () {
   $("body").removeClass("hidden");
 };
 
+AOS.init({
+  duration: 1000,
+  once: true,
+});
+
 //SLIDER INICIAL----------------------------------------
 
 const slider = document.querySelector("#slider");
@@ -49,7 +54,4 @@ setInterval(function () {
   Next();
 }, 10000);
 
-AOS.init({
-  duration: 1100,
-  once: true,
-}); //ESTE METODO ES PARA LAS ANIMACIONES
+//ESTE METODO ES PARA LAS ANIMACIONES
