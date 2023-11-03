@@ -114,14 +114,17 @@ html {
 }
 
 .btn__date__header .btn__date {
-  background-color: #fff;
-  color: #305c79;
+  background-color: #ff6600;
   border: none;
   width: 100px;
   height: 100%;
   font-size: 17px;
   cursor: pointer;
   padding: 5px;
+}
+
+.btn__date__header .btn__date a{
+ color: #fff;
 }
 
 .btn__date__header .btn__date:hover {
@@ -711,7 +714,7 @@ html {
   overflow: hidden;
   perspective: 1000px;
   transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  border: 20px solid #5c97bd;
+  border: 20px solid #326b92;
 }
 
 .information__card {
