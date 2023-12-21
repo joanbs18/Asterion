@@ -3,55 +3,35 @@ window.onload = function () {
   $("body").removeClass("hidden");
 };
 
-// AOS.init({
-//   duration: 1000,
-//   once: true,
-// });
-
-//SLIDER INICIAL----------------------------------------
-
-const slider = document.querySelector("#slider");
-let sliderSection = document.querySelectorAll(".slider__section");
-let sliderSectionLast = sliderSection[sliderSection.length - 1];
-
-const btnLeft = document.querySelector("#btn-left");
-const btnRight = document.querySelector("#btn-right");
-
-slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-
-function Next() {
-  let sliderSectionFirst = document.querySelectorAll(".slider__section")[0];
-  slider.style.marginLeft = "-200%";
-  slider.style.transition = "all 0.5s";
-  setTimeout(function () {
-    slider.style.transition = "none";
-    slider.insertAdjacentElement("beforeend", sliderSectionFirst);
-    slider.style.marginLeft = "-100%";
-  }, 500);
-}
-
-function Prev() {
-  let sliderSection = document.querySelectorAll(".slider__section");
-  let sliderSectionLast = sliderSection[sliderSection.length - 1];
-  slider.style.marginLeft = "0";
-  slider.style.transition = "all 0.5s";
-  setTimeout(function () {
-    slider.style.transition = "none";
-    slider.insertAdjacentElement("afterbegin", sliderSectionLast);
-    slider.style.marginLeft = "-100%";
-  }, 500);
-}
-
-btnRight.addEventListener("click", function () {
-  Next();
-});
-
-btnLeft.addEventListener("click", function () {
-  Prev();
-});
-
-setInterval(function () {
-  Next();
-}, 10000);
-
 //ESTE METODO ES PARA LAS ANIMACIONES
+
+//SE UTILIZA PARA ACTUALIZAR EL AÑO DE LA PAGINA AUTOMATICAMENTE
+document.addEventListener("DOMContentLoaded", function () {
+  var yearSpan = document.getElementById("currentYear");
+  if (yearSpan) {
+    var currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+  }
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+  var responsiveImage = document.getElementById('responsiveImage');
+  var btn= this.document.getElementById('btn');
+
+  function setResponsiveImage() {
+    // Obtener el ancho de la pantalla
+    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+
+    // Cambiar la imagen según el ancho de la pantalla
+    if (windowWidth <= 600) {
+      responsiveImage.src = 'img/asterion-blanco-01-logo.png';
+      btn.classList.add('bluebackground');
+    }
+  }
+
+  // Llamar a la función inicialmente y escuchar el evento de cambio de tamaño de la ventana
+  setResponsiveImage();
+  window.addEventListener('resize', setResponsiveImage);
+});
+
+

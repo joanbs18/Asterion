@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 
+@font-face {
+  font-family: century;
+  src: url(font/Century\ Gothic.ttf);
+}
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
-  font-family: "Noto Serif", serif;
+  font-family: century;
+  /* font-family: "Noto Serif", serif; */
 }
 
 html {
@@ -149,8 +155,17 @@ html {
   cursor: pointer;
 }
 
+.contact__icons__email .email__header i {
+  margin-right: 2%;
+}
+
+.email__header p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .contact__icons__email .icons__header i {
-  margin-right: 20px;
+  margin-right: 25px;
   font-size: 16px;
   color: #fff;
 }
@@ -203,6 +218,7 @@ html {
 
 .list li a {
   position: relative;
+  font-size: 20px;
 }
 
 .navbar .list li a::before {
@@ -246,20 +262,91 @@ html {
 }
 
 /* portada------------------------------- */
-
-/* .content {
-    position: absolute;
-
-    top: 0;
-    width: 100%;
-    z-index: -1;
+@keyframes scale-up-center {
+  0% {
+    transform: scale(0.5);
   }
-  
-  .content img {
-    width: 100%;
+  100% {
+    transform: scale(1);
+  }
+}
 
-  } */
+.frontpage {
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/Portada.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.frontpage__grid {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-wrap: balance;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: #000;
+  transform: translate(-50%, -50%);
+}
 
+.box__frontpage.front2 {
+  color: #305c79;
+}
+
+.box__frontpage img {
+  width: 50%;
+}
+
+.box__frontpage.front1 {
+  background-image: url("img/asterion-blanco-01-texto.png");
+}
+
+.frontpage__btn {
+  background-color: #305c79;
+}
+
+.principle_mouse {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  color: #305c79;
+  transform: translate(-50%, -50%);
+}
+
+.mouse-btna {
+  margin: 10px auto;
+  width: 40px;
+  height: 80px;
+  border: 3px solid #305c79;
+  border-radius: 20px;
+  display: flex;
+}
+
+.mouse-scroll {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(170deg, #305c79, rgb(255, 255, 255));
+  border-radius: 50%;
+  margin: auto;
+  animation: scrolling13 1s linear infinite;
+}
+
+@keyframes scrolling13 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
 .container-slider {
   margin: 0 0;
   position: relative;
@@ -356,9 +443,12 @@ html {
 }
 
 .section__1 {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  color: #000;
+  color: #305c79;
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
@@ -368,7 +458,11 @@ html {
   font-size: 50px;
 }
 
-.section__1 h1::after,
+.line_one {
+  width: 70%;
+}
+
+/* .section__1 h1::after,
 .section__1 h1::before {
   content: "";
   position: absolute;
@@ -384,18 +478,132 @@ html {
 }
 .section__1 h1::after {
   right: 140px;
+} */
+
+.about__me__section {
+  width: 100%;
 }
 
-.section__about__me {
-  display: flex;
-  align-items: center;
+.information__aboutme {
   text-align: center;
-  background-position: center;
-  height: 100%;
-  background: url(img/portada_2.jpg);
-  background-attachment: fixed;
+  color: #305c79;
   width: 100%;
-  
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-wrap: balance;
+  place-content: center;
+}
+
+.box__aboutme__ {
+  font-size: 24px;
+  font-weight: 600;
+  display: grid;
+  place-content: center;
+}
+
+.box__aboutme__.background {
+  background-color: #305c79;
+  color: #fff;
+}
+.box__aboutme__.background_2 {
+  background-color: #fff;
+  color: #305c79;
+}
+
+.box__aboutme__ img {
+  width: 100%;
+}
+
+.box__aboutme__ p {
+  margin: 10px;
+}
+
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.learn-more {
+  width: 12rem;
+  height: auto;
+}
+.learn-more .circle {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: relative;
+  display: block;
+  margin: 0;
+  width: 3rem;
+  height: 3rem;
+  background: #282936;
+  border-radius: 1.625rem;
+}
+
+.learn-more .circle .icon {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background: #fff;
+}
+
+.learn-more .circle .icon.arrow {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  left: 0.625rem;
+  width: 1.125rem;
+  height: 0.125rem;
+  background: none;
+}
+
+.learn-more .circle .icon.arrow::before {
+  position: absolute;
+  content: "";
+  top: -0.29rem;
+  right: 0.0625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-top: 0.125rem solid #fff;
+  border-right: 0.125rem solid #fff;
+  transform: rotate(45deg);
+}
+
+.learn-more .button-text {
+  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.75rem 0;
+  margin: 0 0 0 1.85rem;
+  color: #282936;
+  font-weight: 700;
+  line-height: 1.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.learn-more:hover .circle {
+  width: 100%;
+}
+
+.learn-more:hover .circle .icon.arrow {
+  background: #fff;
+  transform: translate(1rem, 0);
+}
+
+.learn-more:hover .button-text {
+  color: #fff;
 }
 
 .information__about__me {
@@ -406,7 +614,6 @@ html {
   grid-gap: 50px;
   text-wrap: balance;
   color: #fff;
-
 }
 
 .part__2 {
@@ -415,46 +622,24 @@ html {
   padding-right: 50px;
 }
 
-.box__about__me {
-  display: grid;
-  place-content: center;
-}
-
-.box__about__me img {
-  height: 300px;
-}
-
-.box__about__me h2 {
-  color: #fff;
-  font-weight: 300;
-}
-
-.box__about__me h3 {
-  color: #305c79;
-}
-
-.box__about__me h1 {
-  color: #305c79;
-}
-
-.box__about__me p{
-  font-size: 20px;
-  margin: 10px;
-}
-
 .buttons {
   display: flex;
   justify-content: center;
   top: 20px;
   left: 20px;
 }
+.buttons.bluebackground button {
+  background-color: #fff;
+  color: #305c79;
+}
 
 .buttons button {
   width: 150px;
   height: 50px;
-  background-color: white;
+  background-color: #305c79;
+  color: #fff;
   margin: 20px;
-  color: #305c79;
+
   position: relative;
   overflow: hidden;
   font-size: 14px;
@@ -476,7 +661,7 @@ html {
   position: absolute;
   width: 0;
   height: 2px;
-  background-color: #305c79;
+  background-color: #fff;
   transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
 
@@ -508,7 +693,7 @@ html {
   position: absolute;
   width: 2px;
   height: 0;
-  background-color: #305c79;
+  background-color: #fff;
   transition: all 0.3s cubic-bezier(0.35, 0.1, 0.25, 1);
 }
 
@@ -545,13 +730,26 @@ html {
   content: attr(data-title);
   top: 50%;
   transform: translateY(-50%);
+  color: #fff;
+}
+
+.buttons.bluebackground button p:after {
+  content: attr(data-text);
+  top: 150%;
+  color: #305c79;
+}
+
+.buttons.bluebackground button p:before {
+  content: attr(data-title);
+  top: 50%;
+  transform: translateY(-50%);
   color: #305c79;
 }
 
 .buttons button p:after {
   content: attr(data-text);
   top: 150%;
-  color: #305c79;
+  color: #fff;
 }
 
 .buttons button:hover:before,
@@ -621,47 +819,6 @@ html {
 
 .buttons button:focus {
   outline: 0;
-}
-
-.section__about__me__2 {
-  background-color: #305c79;
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  text-wrap: balance;
-}
-
-.section__about__me__2 h1 {
-  font-size: 40px;
-}
-
-.section__about__me__2 .box__aboutme2 {
-  margin: 30px;
-  text-wrap: balance;
-}
-
-.frame_about__me__2 img{
-  width: 100%;
-  height: 100%;
-  
-}
-
-.box__aboutme2 p{
-font-size: 20px;
-}
-
-/* botones de contacto */
-
-.btn__contact__me {
-  position: relative;
-  width: 250px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  top: 4px;
 }
 
 .btn__contact__me button {
@@ -1205,6 +1362,7 @@ font-size: 20px;
     align-items: center;
     padding: 20px;
     margin-right: 0px;
+
   }
 
   .icons__nav {
@@ -1224,47 +1382,35 @@ font-size: 20px;
 
   #toggler:checked ~ .menu {
     max-height: 100%;
+    animation: scale-up-center 0.4s;
   }
 
-  .slider {
-    height: 250px;
+  .frontpage__grid {
+    grid-template-columns: repeat(1, 1fr);
   }
 
-  .slider__content {
-    top: 47%;
+  .box__frontpage.front2 {
+    color: #fff;
   }
 
-  .slider__title {
-    font-size: 1.1em;
+  .front1 {
+    display: none;
   }
 
-  .slider__btn--left {
-    top: 80%;
-  }
-  .slider__btn--right {
-    top: 80%;
-  }
-  .slider__txt {
-    font-size: 15px;
-  }
-  .slider__content {
-    left: 68%;
+  .frontpage__btn {
+    background-color: #fff;
   }
 
-  .slider__btn {
-    width: 25px;
-    height: 25px;
-    font-size: 19px;
-  }
-  .btn-shop {
-    width: 130px;
-    padding: 5px;
-    margin-bottom: 2px;
+  .principle_mouse {
+    color: #fff;
   }
 
-  .slider__content img {
-    height: 80px;
-    margin-top: 5%;
+  .mouse-btna {
+    border: 3px solid #fff;
+  }
+
+  .information__aboutme {
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .section__t__me {
@@ -1290,6 +1436,10 @@ font-size: 20px;
 
   .box__aboutme2 h1 {
     font-size: 25px;
+  }
+
+  .aboutme {
+    margin-top: 3%;
   }
 
   .box__aboutme2 p {
