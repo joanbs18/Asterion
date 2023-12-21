@@ -513,6 +513,7 @@ html {
 
 .box__aboutme__ img {
   width: 100%;
+  background-size: cover;
 }
 
 .box__aboutme__ p {
