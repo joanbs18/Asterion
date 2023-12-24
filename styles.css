@@ -36,6 +36,7 @@ html {
   position: relative;
   width: 100px;
   height: 100px;
+  z-index: 999;
 }
 
 .loader:before,
@@ -126,11 +127,12 @@ html {
 .btn__date__header .btn__date {
   background-color: #ff6600;
   border: none;
-  width: 100px;
   height: 100%;
   font-size: 17px;
   cursor: pointer;
   padding: 5px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .btn__date__header .btn__date a {
@@ -159,9 +161,12 @@ html {
   margin-right: 2%;
 }
 
+.email__header {
+  width: 100%;
+}
+
 .email__header p {
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .contact__icons__email .icons__header i {
@@ -292,6 +297,12 @@ html {
   color: #000;
   transform: translate(-50%, -50%);
 }
+.box__frontpage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .box__frontpage.front2 {
   color: #305c79;
@@ -301,9 +312,7 @@ html {
   width: 50%;
 }
 
-.box__frontpage.front1 {
-  background-image: url("img/asterion-blanco-01-texto.png");
-}
+
 
 .frontpage__btn {
   background-color: #305c79;
@@ -496,7 +505,7 @@ html {
 }
 
 .box__aboutme__ {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   display: grid;
   place-content: center;
@@ -518,6 +527,12 @@ html {
 
 .box__aboutme__ p {
   margin: 10px;
+ 
+  
+}
+
+.text__area{
+  text-align: left;
 }
 
 .learn-more {
@@ -628,6 +643,10 @@ html {
   justify-content: center;
   top: 20px;
   left: 20px;
+}
+
+.buttons .btn{
+  text-align: center;
 }
 .buttons.bluebackground button {
   background-color: #fff;
@@ -1288,9 +1307,12 @@ html {
   margin-bottom: 25px;
   font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p {
+.pie-pagina .grupo-1 .box p a{
   color: #efefef;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+}
+.pie-pagina .grupo-1 .box p {
+  margin-bottom: 16px;
 }
 .pie-pagina .grupo-1 .red-social a {
   display: inline-block;
@@ -1325,6 +1347,17 @@ html {
   }
 }
 
+@media screen and (max-width: 400px) {
+  
+  .contact__icons__email .email__header p {
+    font-size: 12px;
+    margin-right: 5px;
+    overflow: hidden;
+  }
+
+ 
+}
+
 @media screen and (max-width: 600px) {
   .btn__whattsapp {
     width: 63px;
@@ -1339,6 +1372,11 @@ html {
   }
   .contact__icons__email .icons__header i {
     display: none;
+  }
+
+  .contact__icons__email .icons__header,
+  .contact__icons__email .email__header {
+    margin-right: 0;
   }
 
   .contact__icons__email .email__header i {
@@ -1363,7 +1401,6 @@ html {
     align-items: center;
     padding: 20px;
     margin-right: 0px;
-
   }
 
   .icons__nav {
