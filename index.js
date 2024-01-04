@@ -42,7 +42,7 @@ var checkLanguage = document.querySelector(".input__language");
 checkLanguage.addEventListener("click", language);
 
 function language() {
-  let id = checkLanguage.checked;
+  let id = checkLanguage.checked; 
   if (id === true) {
     location.href = "en.html";
   } else {
