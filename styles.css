@@ -2014,3 +2014,39 @@ html {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+
+
+@media screen and (max-width: 1024px) {
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    width: 90%;
+  }
+
+  .primary__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    width: 90%;
+  }
+
+  .section__notices {
+    display: grid;
+    place-content: center;
+  }
+
+  .notices {
+    grid-template-columns: repeat(1, 1fr);
+  
+  }
+
+  
+.logo {
+  margin-left: 50%;
+}
+
+
+
+.list {
+  margin-left: 200px;
+}
+}
