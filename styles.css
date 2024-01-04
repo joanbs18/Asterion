@@ -266,6 +266,8 @@ html {
   display: none;
 }
 
+
+
 /* portada------------------------------- */
 @keyframes scale-up-center {
   0% {
@@ -297,7 +299,7 @@ html {
   color: #000;
   transform: translate(-50%, -50%);
 }
-.box__frontpage{
+.box__frontpage {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -311,8 +313,6 @@ html {
 .box__frontpage img {
   width: 50%;
 }
-
-
 
 .frontpage__btn {
   background-color: #305c79;
@@ -527,11 +527,9 @@ html {
 
 .box__aboutme__ p {
   margin: 10px;
- 
-  
 }
 
-.text__area{
+.text__area {
   text-align: left;
 }
 
@@ -645,7 +643,7 @@ html {
   left: 20px;
 }
 
-.buttons .btn{
+.buttons .btn {
   text-align: center;
 }
 .buttons.bluebackground button {
@@ -1307,7 +1305,7 @@ html {
   margin-bottom: 25px;
   font-size: 20px;
 }
-.pie-pagina .grupo-1 .box p a{
+.pie-pagina .grupo-1 .box p a {
   color: #efefef;
   margin-bottom: 16px;
 }
@@ -1339,6 +1337,278 @@ html {
   font-size: 15px;
 }
 @media screen and (max-width: 800px) {
+  .btn__whattsapp {
+    width: 63px;
+    height: 63px;
+    line-height: 66px;
+  }
+  .contact_whattsapp a img {
+    width: 80px;
+    margin-top: 160%;
+    margin-right: 4%;
+    z-index: 99;
+  }
+
+  .contact__icons__email .icons__header,
+  .contact__icons__email .email__header {
+    margin-right: 0;
+  }
+
+  .contact__icons__email .email__header i {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+  .logo img {
+    height: 60px;
+  }
+
+  .menu {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+  }
+  .list {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin-right: 0px;
+  }
+
+  .icons__nav {
+    display: flex;
+  }
+  .icons__nav i {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .navbar label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
+  #toggler:checked ~ .menu {
+    max-height: 100%;
+    animation: scale-up-center 0.4s;
+  }
+
+  .frontpage__grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box__frontpage.front2 {
+    color: #fff;
+  }
+
+  .front1 {
+    display: none;
+  }
+
+  .frontpage__btn {
+    background-color: #fff;
+  }
+
+  .principle_mouse {
+    color: #fff;
+  }
+
+  .mouse-btna {
+    border: 3px solid #fff;
+  }
+
+  .information__aboutme {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section__t__me {
+    background-size: cover;
+  }
+
+  .information__about__me {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* botones de contacto */
+
+  .btn__contact__me {
+    margin-bottom: 10px;
+  }
+  .section__1 {
+    margin-top: 12%;
+  }
+
+  .section__1 h1 {
+    font-size: 25px;
+  }
+
+  .box__aboutme2 h1 {
+    font-size: 25px;
+  }
+
+  .aboutme {
+    margin-top: 3%;
+  }
+
+  .box__aboutme2 p {
+    font-size: 15px;
+  }
+
+  .section__1 p {
+    font-size: 15px;
+  }
+
+  .section__1 h1::after,
+  .section__1 h1::before {
+    width: 20px;
+  }
+
+  .section__1 h1::before {
+    left: 10px;
+  }
+  .section__1 h1::after {
+    right: 10px;
+  }
+
+  .section__2 {
+    display: grid;
+    place-content: center;
+    margin-top: 0px;
+  }
+
+  .services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+    place-content: center;
+  }
+
+  .primary__services {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 25px;
+  }
+
+  .services .card.secundary {
+    height: 150px;
+  }
+
+  .section__2 .card {
+    width: 280px;
+  }
+
+  .section__2 .fa-solid.fa-eye {
+    font-size: 25px;
+    margin-top: 10%;
+  }
+  .section__2 .card i {
+    font-size: 48px;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .section__2 .card:hover {
+    transform: scale(1.05);
+  }
+
+  .section__2 .card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+
+  .section__2 .card:hover .card__content {
+    transform: rotateX(0deg);
+  }
+
+  .section__2 .services .card__title {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+    font-weight: 700;
+  }
+
+  .section__2 .services .card__description {
+    font-size: 10px;
+  }
+
+  .section__notices {
+    display: grid;
+    place-content: center;
+  }
+
+  .notices {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+  }
+
+  .card__notices {
+    padding: 20px;
+    max-width: 300px;
+    height: 420px;
+  }
+
+  .card__notices .card-image {
+    min-height: 180px;
+  }
+
+  .card__notices .card-image a img {
+    width: 300px;
+  }
+
+  .contact_form h1 {
+    font-size: 25px;
+  }
+
+  iframe {
+    width: 300px;
+  }
+
+  .box__contact__form {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .contact__grid {
+    display: grid;
+    place-content: center;
+  }
+
+  .input {
+    position: relative;
+    width: 300px;
+    border: none;
+    box-shadow: 0px 1.5px 0px 0px #fff;
+    padding: 1rem;
+    transition: all 200ms ease-in-out;
+    background: #ffffff;
+    font-size: 1rem;
+  }
+
+  .contact__grid h1 {
+    font-size: 25px;
+    padding: 5px;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+  }
+
+  .dates_personal {
+    flex-direction: column;
+  }
+
+  .section__about__me__2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
   .pie-pagina .grupo-1 {
     width: 90%;
     grid-template-columns: repeat(1, 1fr);
@@ -1348,14 +1618,11 @@ html {
 }
 
 @media screen and (max-width: 400px) {
-  
   .contact__icons__email .email__header p {
     font-size: 12px;
     margin-right: 5px;
     overflow: hidden;
   }
-
- 
 }
 
 @media screen and (max-width: 600px) {
@@ -1634,4 +1901,111 @@ html {
   .section__about__me__2 {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
+  z-index: 999;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider__ {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #305c79;
+  transition: 0.4s;
+  border-radius: 30px;
+}
+
+.slider__:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: #e8e8e8;
+  transition: 0.4s;
+}
+
+.sun svg {
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #305c79;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover.sun svg {
+  animation: rotate 15s linear infinite;
+} */
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover.moon svg {
+  animation: tilt 5s linear infinite;
+} */
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider__ {
+  background-color: #305c79;
+}
+
+.input:focus + .slider__ {
+  box-shadow: 0 0 1px #305c79;
+}
+
+.input:checked + .slider__:before {
+  transform: translateX(30px);
 }

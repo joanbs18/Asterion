@@ -14,24 +14,38 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-window.addEventListener('DOMContentLoaded', function() {
-  var responsiveImage = document.getElementById('responsiveImage');
-  var btn= this.document.getElementById('btn');
+window.addEventListener("DOMContentLoaded", function () {
+  var responsiveImage = document.getElementById("responsiveImage");
+  var btn = this.document.getElementById("btn");
 
   function setResponsiveImage() {
     // Obtener el ancho de la pantalla
-    var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    var windowWidth =
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
 
     // Cambiar la imagen según el ancho de la pantalla
     if (windowWidth <= 600) {
-      responsiveImage.src = 'img/asterion-blanco-01-logo.png';
-      btn.classList.add('bluebackground');
+      responsiveImage.src = "img/asterion-blanco-01-logo.png";
+      btn.classList.add("bluebackground");
     }
   }
 
   // Llamar a la función inicialmente y escuchar el evento de cambio de tamaño de la ventana
   setResponsiveImage();
-  window.addEventListener('resize', setResponsiveImage);
+  window.addEventListener("resize", setResponsiveImage);
 });
 
+var checkLanguage = document.querySelector(".input__language");
 
+checkLanguage.addEventListener("click", language);
+
+function language() {
+  let id = checkLanguage.checked;
+  if (id === true) {
+    location.href = "en.html";
+  } else {
+    location.href = "index.html";
+  }
+}
