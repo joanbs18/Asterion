@@ -1576,11 +1576,11 @@ html {
   }
 
   .box__aboutme2 p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .section__1 p {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .section__1 h1::after,
@@ -1877,6 +1877,10 @@ html {
 
   .section__1 p {
     font-size: 14px;
+  }
+
+  .text__area {
+    font-size: 17px;
   }
 
   .section__1 h1::after,
