@@ -490,6 +490,10 @@ html {
   height: 100%;
 }
 
+.title__asterion{
+  display: none;
+}
+
 .slider__section {
   width: 100%;
   position: relative;
@@ -1490,6 +1494,10 @@ html {
     margin-right: 0px;
   }
 
+  .title__asterion{
+    display: flex;
+  }
+
   .icons__nav {
     display: flex;
   }
@@ -1568,11 +1576,11 @@ html {
   }
 
   .box__aboutme2 p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .section__1 p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .section__1 h1::after,
@@ -1860,11 +1868,11 @@ html {
   }
 
   .box__aboutme2 p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .section__1 p {
-    font-size: 15px;
+    font-size: 14px;
   }
 
   .section__1 h1::after,
