@@ -1757,6 +1757,10 @@ html {
     margin-right: 4%;
     z-index: 99;
   }
+
+  .title__asterion{
+    display: flex;
+  }
   .contact__icons__email .icons__header i {
     display: none;
   }
