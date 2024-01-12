@@ -226,10 +226,6 @@ html {
   font-size: 20px;
 }
 
-
-
-
-
 .navbar .list li a::before {
   content: "";
   position: absolute;
@@ -269,7 +265,6 @@ html {
 .navbar .label__toggler {
   display: none;
 }
-
 
 .switch {
   font-size: 17px;
@@ -377,9 +372,6 @@ html {
   transform: translateX(30px);
 }
 
-
-
-
 /* portada------------------------------- */
 @keyframes scale-up-center {
   0% {
@@ -396,18 +388,19 @@ html {
   background-image: url(img/Portada.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center bottom;
 }
 .frontpage__grid {
   text-align: center;
   color: #fff;
-  width: 100%;
+  width: 40%;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   text-wrap: balance;
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 30%;
   color: #000;
   transform: translate(-50%, -50%);
 }
@@ -419,7 +412,7 @@ html {
 }
 
 .box__frontpage.front2 {
-  color: #305c79;
+  color: #fff;
 }
 
 .box__frontpage img {
@@ -427,14 +420,14 @@ html {
 }
 
 .frontpage__btn {
-  background-color: #305c79;
+  background-color: #fff;
 }
 
 .principle_mouse {
   position: absolute;
   top: 90%;
   left: 50%;
-  color: #305c79;
+  color: #fff;
   transform: translate(-50%, -50%);
 }
 
@@ -442,7 +435,7 @@ html {
   margin: 10px auto;
   width: 40px;
   height: 80px;
-  border: 3px solid #305c79;
+  border: 3px solid #fff;
   border-radius: 20px;
   display: flex;
 }
@@ -490,7 +483,7 @@ html {
   height: 100%;
 }
 
-.title__asterion{
+.title__asterion {
   display: none;
 }
 
@@ -1494,7 +1487,7 @@ html {
     margin-right: 0px;
   }
 
-  .title__asterion{
+  .title__asterion {
     display: flex;
   }
 
@@ -1758,7 +1751,7 @@ html {
     z-index: 99;
   }
 
-  .title__asterion{
+  .title__asterion {
     display: flex;
   }
   .contact__icons__email .icons__header i {
@@ -1822,8 +1815,12 @@ html {
     color: #fff;
   }
 
+  .frontpage {
+    background-position: 77% bottom;
+  }
+
   .front1 {
-    display: none;
+    display: flex;
   }
 
   .frontpage__btn {
@@ -2030,5 +2027,3 @@ html {
     grid-template-columns: repeat(1, 1fr);
   }
 }
-
-
