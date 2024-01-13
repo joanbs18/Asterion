@@ -42,10 +42,20 @@ var checkLanguage = document.querySelector(".input__language");
 checkLanguage.addEventListener("click", language);
 
 function language() {
-  let id = checkLanguage.checked; 
+  let id = checkLanguage.checked;
   if (id === true) {
     location.href = "en.html";
   } else {
     location.href = "index.html";
   }
+}
+
+var listItems = document.getElementById("list").getElementsByTagName("li");
+var toggler = document.getElementById("toggler");
+
+// Agrega un evento de clic a cada elemento <li>
+for (var i = 0; i < listItems.length; i++) {
+  listItems[i].addEventListener("click", function () {
+    toggler.checked = false;
+  });
 }

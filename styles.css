@@ -398,10 +398,7 @@ html {
   transform: translate(-50%, -50%);
   width: 60%;
   text-align: center;
-  text-wrap: balance;
   white-space: nowrap;
-
-
 }
 
 .front1 {
@@ -1463,6 +1460,16 @@ html {
     font-size: 12px;
     margin-right: 5px;
     overflow: hidden;
+  }
+  .frontpage__grid {
+    max-width: 100%;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .frontpage__grid {
+  white-space: normal;
   }
 }
 
