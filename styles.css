@@ -29,7 +29,7 @@ html {
   align-items: center;
   height: 100vh;
   background-color: #fff;
-  z-index: 998;
+  z-index: 999;
 }
 
 .loader {
