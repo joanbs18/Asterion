@@ -389,6 +389,7 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
+  z-index: 99;
 }
 .frontpage__grid {
   position: absolute;
