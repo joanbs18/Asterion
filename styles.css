@@ -29,7 +29,7 @@ html {
   align-items: center;
   height: 100vh;
   background-color: #fff;
-  z-index: 999;
+  z-index: 998;
 }
 
 .loader {
@@ -198,7 +198,7 @@ html {
   top: 0;
   color: #305c79;
   background-color: #fff;
-  z-index: 999;
+  z-index: 997;
 }
 
 .navbar a {
@@ -521,7 +521,7 @@ html {
   text-align: center;
   border-radius: 50%;
   cursor: pointer;
-  z-index: 999;
+  z-index: 996;
 }
 .slider__btn:hover {
   background: #305c79;
