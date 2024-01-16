@@ -1029,6 +1029,7 @@ html {
   color: #fff;
   width: 80%;
   max-width: 1500px;
+  margin: auto;
 }
 
 .services .card.secundary {
@@ -1462,7 +1463,6 @@ html {
     width: 60%;
   }
 
-   
   .menu {
     width: 100%;
     max-height: 0;
@@ -1495,7 +1495,6 @@ html {
     animation: scale-up-center 0.4s;
   }
 }
-
 
 /*REPONSIVE PHONE LITTLE--------------------------------------------------------------------*/
 
