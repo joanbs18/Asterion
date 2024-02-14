@@ -59,3 +59,39 @@ for (var i = 0; i < listItems.length; i++) {
     toggler.checked = false;
   });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Obtener el ID de la ventana
+  var ventanaId = window.location.hash.substring(1);
+  console.log(ventanaId);
+  // Marcar el elemento correspondiente en el menú
+  marcarElemento(ventanaId);
+
+  // Agregar un evento de cambio en la ventana para actualizar el marcado
+  window.addEventListener("hashchange", function () {
+    ventanaId = window.location.hash.substring(1);
+
+    marcarElemento(ventanaId);
+  });
+
+  function marcarElemento(id) {
+    // Desmarcar todos los elementos del menú
+    var elementosMenu = document.querySelectorAll("#list li a");
+    console.log(elementosMenu);
+
+   
+    elementosMenu.forEach(function (elemento) {
+      elemento.parentElement.classList.remove("marked");
+    });
+
+    // Marcar el elemento correspondiente
+    var elementoMarcado = document.querySelector(
+      '#list li a[href="#' + id + '"]'
+    );
+
+    console.log(elementoMarcado);
+    if (elementoMarcado) {
+      elementoMarcado.parentElement.classList.add("marked");
+    }
+  }
+});

@@ -1105,11 +1105,13 @@ html {
   line-height: 1.4;
 }
 
+.marked {
+  color: #ff6600; /* Puedes personalizar el estilo de marcado aquí */
+}
+
 .section__notices {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  place-content: center;
 }
 
 .notices {
@@ -1502,6 +1504,20 @@ html {
   #toggler:checked ~ .menu {
     max-height: 100%;
     animation: scale-up-center 0.4s;
+  }
+
+  .card__notices {
+    padding: 20px;
+    max-width: 300px;
+    height: 420px;
+  }
+
+  .card__notices .card-image {
+    min-height: 180px;
+  }
+
+  .card__notices .card-image a img {
+    width: 300px;
   }
 }
 
