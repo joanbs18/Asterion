@@ -1,2 +1,0 @@
-Se realizarón pruebas de Inyeccion SQL, escaneo de puertos con from zapv2 import ZAPv2, y otro analisis de vulnerablidades
-Tecnologias usadasweb-servers: LiteSpeedcache-tools: WP Rocketcms: WordPressprogramming-languages: PHPblogs: PHP, WordPressfont-scripts: Font Awesome, Google Font APItag-managers: Google Tag Managerphoto-galleries: Lightboxjavascript-frameworks: Lightbox, Modernizr, jQuerymarketing-automation: Yoast SEOvideo-players: YouTube
