@@ -1019,6 +1019,7 @@ html {
   grid-gap: 70px;
   text-wrap: balance;
   margin-bottom: 2%;
+  place-content: center;
 }
 
 .services {
