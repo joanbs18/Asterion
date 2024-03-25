@@ -1,9 +1,10 @@
 <?php
 // Validación de datos
-$name = htmlspecialchars($_POST['name']);
-$number = htmlspecialchars($_POST['number']);
-$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ? $_POST['email'] : '';
-$message = htmlspecialchars($_POST['message']);
+// Validación de datos
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$number = isset($_POST['number']) ? htmlspecialchars($_POST['number']) : '';
+$email = isset($_POST['email']) ? filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) : '';
+$message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
 
 // Verifica si los datos son válidos antes de proceder
 if ($name && $number && $email && $message) {
@@ -18,12 +19,15 @@ if ($name && $number && $email && $message) {
     // Intenta enviar el correo y maneja errores si los hay
     try {
         mail($destination, $asunto, $body);
-        header('Location: index.html');
+         echo $body;
+       // header('Location: index.html');
         exit;
     } catch (Exception $e) {
         echo 'Error al enviar el correo: ' . $e->getMessage();
     }
+    
 } else {
+     echo $name, ', ', $number, ', ', $email, ', ', $message;
     echo 'Datos no válidos. Por favor, complete todos los campos correctamente.';
 }
 ?>
