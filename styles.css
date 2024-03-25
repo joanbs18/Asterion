@@ -226,6 +226,11 @@ html {
   font-size: 20px;
 }
 
+.list li a.selected {
+  color: #ff6600;
+}
+
+
 .navbar .list li a::before {
   content: "";
   position: absolute;
@@ -642,12 +647,18 @@ html {
   background-size: cover;
 }
 
+
 .box__aboutme__ p {
   margin: 10px;
 }
 
 .text__area {
   text-align: left;
+  border: 1px solid red;
+  width: 90%;
+  height: auto;
+  overflow: auto;
+  text-wrap: balance;
 }
 
 .learn-more {

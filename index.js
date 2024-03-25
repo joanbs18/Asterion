@@ -59,39 +59,35 @@ for (var i = 0; i < listItems.length; i++) {
     toggler.checked = false;
   });
 }
+const menu = document.querySelector(".list");
+const menuLinks = document.querySelectorAll('.list li a[href^="#"]');
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Obtener el ID de la ventana
-  var ventanaId = window.location.hash.substring(1);
-  console.log(ventanaId);
-  // Marcar el elemento correspondiente en el menú
-  marcarElemento(ventanaId);
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      const id = entry.target.getAttribute("id");
+      const menuLink = document.querySelector(`.list li a[href="#${id}"]`);
+      console.log(menuLink);
+      if (entry.isIntersecting) {
+        console.log(document.querySelector(".list li a.selected"));
+        document
+          .querySelector(".list li a.selected")
+          .classList.remove("selected");
+        menuLink.classList.add("selected");
+      }
+    });
+  },
+  { rootMargin: "-30% 0px -70% 0px" }
+);
 
-  // Agregar un evento de cambio en la ventana para actualizar el marcado
-  window.addEventListener("hashchange", function () {
-    ventanaId = window.location.hash.substring(1);
-
-    marcarElemento(ventanaId);
+menuLinks.forEach((menuLink) => {
+  menuLink.addEventListener("click", function () {
+    menu.classList.remove("menu_opened");
   });
 
-  function marcarElemento(id) {
-    // Desmarcar todos los elementos del menú
-    var elementosMenu = document.querySelectorAll("#list li a");
-    console.log(elementosMenu);
-
-   
-    elementosMenu.forEach(function (elemento) {
-      elemento.parentElement.classList.remove("marked");
-    });
-
-    // Marcar el elemento correspondiente
-    var elementoMarcado = document.querySelector(
-      '#list li a[href="#' + id + '"]'
-    );
-
-    console.log(elementoMarcado);
-    if (elementoMarcado) {
-      elementoMarcado.parentElement.classList.add("marked");
-    }
+  const hash = menuLink.getAttribute("href");
+  const target = document.querySelector(hash);
+  if (target) {
+    observer.observe(target);
   }
 });
