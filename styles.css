@@ -648,12 +648,12 @@ html {
 
 .text__area {
   text-align: justify;
-  width: 70%;
-  height: auto;
-  overflow: auto;
-  text-wrap: balance;
+  hyphens: auto;
+  padding: 20px; /* opcional: agregar relleno para simular un textarea */
   margin: 0 auto;
 }
+
+
 
 .learn-more {
   position: relative;
