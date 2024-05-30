@@ -91,3 +91,12 @@ menuLinks.forEach((menuLink) => {
     observer.observe(target);
   }
 });
+
+
+function envioFormulario(){
+  alert("ENVIADO\nGracias por tu mensaje. Nos pondremos en contacto contigo en la mayor brevedad posible");
+}
+
+function sendForm(){
+  alert("SUBMITTED\nThank you for your message! We will get in touch with you as soon as possible.");
+}
