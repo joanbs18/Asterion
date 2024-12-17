@@ -2,21 +2,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 
 @font-face {
-  font-family: century;
+  font-family: "century";
   src: url(font/Century\ Gothic.ttf);
 }
 
-* {
-  padding: 0;
+*{
   margin: 0;
-  list-style: none;
-  text-decoration: none;
-  font-family: century;
-  /* font-family: "Noto Serif", serif; */
 }
 
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "century";
+  line-height: 1.2;
+
+  
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+img{
+  max-width: 100%;
 }
 
 .hidden {
@@ -78,6 +89,7 @@ html {
   transition: ease 0.3s;
   animation: efecto_whatsapp 1.2s infinite;
 }
+
 
 .btn__whattsapp:hover {
   background: #20ba5a;
@@ -401,10 +413,16 @@ html {
   left: 30%;
   color: white;
   transform: translate(-50%, -50%);
-  width: 60%;
+  width: 100%;
   text-align: center;
   white-space: nowrap;
 }
+
+@media (min-width: 768px){
+  .frontpage__grid {
+    width: 60%;
+  }
+ }
 
 .front1 {
   filter: drop-shadow(
@@ -429,6 +447,7 @@ html {
 
 .box__frontpage img {
   width: 30%;
+  height: auto;
 }
 
 .frontpage__btn {
@@ -776,8 +795,8 @@ html {
   height: 50px;
   background-color: #305c79;
   color: #fff;
-  margin: 20px;
-
+ margin-top: 20px;
+ margin-bottom: 20px;
   position: relative;
   overflow: hidden;
   font-size: 14px;
@@ -1132,12 +1151,33 @@ html {
 .card__notices {
   padding: 20px;
   max-width: 500px;
-  height: 460px;
+  height: auto;
   border-radius: 20px;
   background: #fff;
   box-shadow: 5px 5px 6px #0d0d0d32, -5px -5px 6px #0d0d0d32;
   transition: 0.4s;
   font-family: "Merriweather", serif;
+  overflow-y: auto; /* Agrega un scrollbar si el contenido excede el max-height */
+}
+/* Estiliza la barra de desplazamiento en Webkit browsers (Chrome, Safari, Edge) */
+.card__notices::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra */
+}
+
+.card__notices::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del fondo de la pista */
+  border-radius: 10px;
+}
+
+.card__notices::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4; /* Color del pulgar (parte que se mueve) */
+  border-radius: 10px;
+  border: 3px solid #f1f1f1; /* Espacio alrededor del pulgar */
+}
+
+/* Efecto hover sobre el pulgar */
+.card__notices::-webkit-scrollbar-thumb:hover {
+  background-color: #2a4c63; /* Color más oscuro cuando el usuario pasa el ratón */
 }
 
 .card__notices:hover {
@@ -1157,12 +1197,9 @@ html {
 
 .card__notices .card-image {
   min-height: 180px;
-  width: 100%;
 }
 
-.card__notices .card-image a img {
-  width: 500px;
-}
+
 
 .card__notices .card-body {
   margin: 13px 0 0 10px;
@@ -1327,7 +1364,7 @@ iframe{
   height: 120px;
   width: 100%;
   padding-top: 5px;
-  font-family: "Poppins", sans-serif;
+  font-family: "century", sans-serif;
   justify-content: center;
 }
 

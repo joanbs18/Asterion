@@ -23,8 +23,10 @@
     <meta name="twitter:title" content="Asterión RG Abogados | Soluciones Legales Personalizadas">
     <meta name="twitter:description" content="Firma de abogados en Costa Rica, especializada en derecho de familia, laboral y notarial. Soluciones holísticas adaptadas a las necesidades únicas de nuestros clientes.">
     <meta name="twitter:image" content="https://asterion-rg.com/img/asterion%20fondo%20transparente-01%20(1).png">
-
+    <link rel="preload" href="normalize.css" as="style">
+<link rel="stylesheet" href="normalize.css">
     <script src="https://kit.fontawesome.com/bf208e9523.js" crossorigin="anonymous"></script>
+    <link rel="preload" href="styles.css" as="style">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/asterion%20fondo%20transparente-01%20(1).png" type="image/x-icon">
     <title>Inicio - Asterión RG Abogados</title>
@@ -35,8 +37,10 @@
     <div class="loader__body" id="loader">
         <span class="loader"></span>
     </div>
-    <a href="https://wa.me/message/UVBR6ZP6ST3FE1" class="btn__whattsapp"><i class="fa-brands fa-whatsapp"></i></a>
-
+    <a href="https://wa.me/message/UVBR6ZP6ST3FE1" class="btn__whattsapp" aria-label="Enviar mensaje por WhatsApp">
+        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+    </a>
+    
     <div class="informacion__header">
         <div class="contact__header">
             <div class="btn__date__header">
@@ -73,7 +77,7 @@
                 <li><a href="#services">Servicios</a></li>
                 <li><a href="#notices">Blog</a></li>
                 <li><a href="#contactme">Contacto</a></li>
-                <label class="switch">
+                <label class="switch" for="language-switch">
                     <span class="sun"><svg viewBox="0 -4 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_503_3486)">
                                 <rect width="28" height="20" rx="2" fill="white" />
@@ -130,7 +134,7 @@
                             <path fill="#99AAB5" d="M7 16h1v7H7zm9 0h1v7h-1z"></path>
                             <path fill="#66757F" d="M6 22h3v1H6zm9 0h3v1h-3zm-8-7h1v1H7zm9 0h1v1h-1z"></path>
                         </svg></span>
-                    <input type="checkbox" class="input__language">
+                    <input type="checkbox" class="input__language" for="language-switch">
                     <span class="slider__"></span>
                 </label>
                 <div class="icons__nav">
@@ -531,9 +535,14 @@
                             <p><i class="fa-solid fa-envelope"></i>abogados@asterion-rg.com</p>
                         </div>
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9723266146802!2d-85.58896652575098!3d10.263813268441307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fcb82f3477fb7%3A0x166aabbf0170b1ef!2sAsteri%C3%B3n%20RG%20Abogados!5e0!3m2!1ses!2scr!4v1697239050725!5m2!1ses!2scr"
-                              style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3925.9723266146802!2d-85.58896652575098!3d10.263813268441307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f9fcb82f3477fb7%3A0x166aabbf0170b1ef!2sAsteri%C3%B3n%20RG%20Abogados!5e0!3m2!1ses!2scr!4v1697239050725!5m2!1ses!2scr"
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade" 
+                        title="Ubicación de Asterión RG Abogados en Google Maps">
+                    </iframe>
+                    
                     </div>
                 </div>
             </div>
@@ -561,20 +570,20 @@
                     <ul class="wrapper">
                         <a href="https://www.facebook.com/asterionrgabogados
 
-                        ">
+                        "  aria-label="Visitar Facebook">
                             <li class="icon facebook">
                                 <span class="tooltip">Facebook</span>
                                 <span><i class="fab fa-facebook-f"></i></span>
                             </li>
                         </a>
-                        <a href="https://wa.me/message/UVBR6ZP6ST3FE1">
+                        <a href="https://wa.me/message/UVBR6ZP6ST3FE1"  aria-label="Visitar WhatsApp">
                             <li class="icon whattsapp">
                                 <span class="tooltip">WhatSapp</span>
                                 <span><i class="fab fa-whatsapp"></i></span>
                             </li>
                         </a>
                         <a href="https://www.instagram.com/asterionrgabogados/
-                    ">
+                    "  aria-label="Visitar Instagram">
                             <li class="icon instagram">
                                 <span class="tooltip">Instagram</span>
                                 <span><i class="fab fa-instagram"></i></span>
@@ -592,7 +601,7 @@
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16670809049">
 </script>

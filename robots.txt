@@ -1,0 +1,8 @@
+# Permitir el acceso a todo el sitio
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Allow: /
+
+Sitemap: https://asterion-rg.com/sitemap.xml
+
