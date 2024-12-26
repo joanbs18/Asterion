@@ -448,7 +448,8 @@ img{
 
 .box__frontpage img {
   width: 30%;
-  height: auto;
+  height: 100%; /* O un valor fijo si lo prefieres */
+  object-fit: cover;
 }
 
 .frontpage__btn {
